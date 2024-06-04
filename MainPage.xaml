@@ -40,7 +40,7 @@
 
             <!-- Operation Buttons -->
             <Button Text="/" Grid.Column="3" Grid.Row="0"  Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="x" Grid.Column="3" Grid.Row="1"  Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
+            <Button Text="*" Grid.Column="3" Grid.Row="1"  Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
             <Button Text="-" Grid.Column="3" Grid.Row="2"  Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
             <Button Text="+" Grid.Column="3" Grid.Row="3"  Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
 
