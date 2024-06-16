@@ -28,7 +28,7 @@ namespace Calculator
                     CalculateResult();
                     break;
                 case "/":
-                case "*":
+                case "x":
                 case "-":
                 case "+":
                 case "x^y":
@@ -145,7 +145,7 @@ namespace Calculator
                     case "/":
                         result = number1 / number2;
                         break;
-                    case "*":
+                    case "x":
                         result = number1 * number2;
                         break;
                     case "-":
