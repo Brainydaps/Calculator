@@ -8,14 +8,14 @@
             <Label x:Name="tempDisplayLabel" FontSize="24" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="{Binding TempDisplay}" TextColor="DimGray"/>
             <Label x:Name="displayTextLabel" FontSize="48" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="{Binding DisplayText}" TextColor="Black"/>
         </StackLayout>
-        <Grid HorizontalOptions="Center" VerticalOptions="Center">
-            <Grid.ColumnDefinitions>
+        <Grid HorizontalOptions="Center" VerticalOptions="Center" Padding="20">
+            <Grid.ColumnDefinitions Padding="10">
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
+            <Grid.RowDefinitions Padding="10">
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
