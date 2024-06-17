@@ -8,7 +8,7 @@
     Title="Calculator">
 
     <ShellContent
-        Title="Home"
+        Title="Calculator by Brainydaps"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
