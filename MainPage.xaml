@@ -1,21 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.MainPage">
+             x:Class="Calculator.MainPage"
+             BackgroundColor="Black">
 
     <StackLayout>
         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-            <Label x:Name="tempDisplayLabel" FontSize="24" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="{Binding TempDisplay}" TextColor="DimGray"/>
-            <Label x:Name="displayTextLabel" FontSize="48" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="{Binding DisplayText}" TextColor="Black"/>
+            <Label x:Name="tempDisplayLabel" FontSize="24" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="{Binding TempDisplay}" TextColor="White" Padding="10"/>
+            <Label x:Name="displayTextLabel" FontSize="48" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="{Binding DisplayText}" TextColor="White" Padding="10"/>
         </StackLayout>
         <Grid HorizontalOptions="Center" VerticalOptions="Center" Padding="20">
-            <Grid.ColumnDefinitions Padding="10">
+            <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions Padding="10">
+            <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -24,35 +25,35 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <!-- Number Buttons in Top Left -->
-            <Button Text="7" Grid.Column="0" Grid.Row="0" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White"/>
-            <Button Text="8" Grid.Column="1" Grid.Row="0" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White"/>
-            <Button Text="9" Grid.Column="2" Grid.Row="0" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White"/>
-            <Button Text="4" Grid.Column="0" Grid.Row="1" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White"/>
-            <Button Text="5" Grid.Column="1" Grid.Row="1" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White"/>
-            <Button Text="6" Grid.Column="2" Grid.Row="1" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White"/>
-            <Button Text="1" Grid.Column="0" Grid.Row="2" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White"/>
-            <Button Text="2" Grid.Column="1" Grid.Row="2" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White"/>
-            <Button Text="3" Grid.Column="2" Grid.Row="2" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White"/>
-            <Button Text="0" Grid.Column="0" Grid.Row="3" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White"/>
-            <Button Text="." Grid.Column="1" Grid.Row="3" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White"/>
-            <Button Text="=" Grid.Column="2" Grid.Row="3" WidthRequest="60" HeightRequest="60" Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
+            <!-- Number Buttons -->
+            <Button Text="7" Grid.Column="0" Grid.Row="0" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="8" Grid.Column="1" Grid.Row="0" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="9" Grid.Column="2" Grid.Row="0" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="4" Grid.Column="0" Grid.Row="1" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="5" Grid.Column="1" Grid.Row="1" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="6" Grid.Column="2" Grid.Row="1" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="1" Grid.Column="0" Grid.Row="2" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="2" Grid.Column="1" Grid.Row="2" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="3" Grid.Column="2" Grid.Row="2" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="0" Grid.Column="0" Grid.Row="3" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="." Grid.Column="1" Grid.Row="3" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#333333" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="=" Grid.Column="2" Grid.Row="3" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
 
             <!-- Operation Buttons -->
-            <Button Text="/" Grid.Column="3" Grid.Row="0"  Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="*" Grid.Column="3" Grid.Row="1"  Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="-" Grid.Column="3" Grid.Row="2"  Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="+" Grid.Column="3" Grid.Row="3"  Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
+            <Button Text="÷" Grid.Column="3" Grid.Row="0" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="×" Grid.Column="3" Grid.Row="1" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="−" Grid.Column="3" Grid.Row="2" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="+" Grid.Column="3" Grid.Row="3" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
 
-            <!-- Other Functions in Bottom -->
-            <Button Text="x²" Grid.Column="0" Grid.Row="4" Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="√" Grid.Column="1" Grid.Row="4"  Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="x^y" Grid.Column="2" Grid.Row="4" Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="y√x" Grid.Column="3" Grid.Row="4" Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="cos" Grid.Column="0" Grid.Row="5" Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="sin" Grid.Column="1" Grid.Row="5" Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="tan" Grid.Column="2" Grid.Row="5" Clicked="Button_Click" BackgroundColor="Yellow" TextColor="Black"/>
-            <Button Text="C" Grid.Column="3" Grid.Row="5" Clicked="Button_Click" BackgroundColor="Red" TextColor="White"/>
+            <!-- Other Functions -->
+            <Button Text="x²" Grid.Column="0" Grid.Row="4" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="√" Grid.Column="1" Grid.Row="4" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="xʸ" Grid.Column="2" Grid.Row="4" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="ʸ√x" Grid.Column="3" Grid.Row="4" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="cos" Grid.Column="0" Grid.Row="5" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="sin" Grid.Column="1" Grid.Row="5" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="tan" Grid.Column="2" Grid.Row="5" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="#FF9500" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
+            <Button Text="C" Grid.Column="3" Grid.Row="5" WidthRequest="75" HeightRequest="75" Clicked="Button_Click" BackgroundColor="Red" TextColor="White" CornerRadius="38" FontSize="24" Margin="5"/>
         </Grid>
     </StackLayout>
 </ContentPage>

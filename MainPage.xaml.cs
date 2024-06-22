@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Maui.Controls;
 
 namespace Calculator
@@ -10,6 +10,26 @@ namespace Calculator
         double number1 = 0;
         double number2 = 0;
         string operation = "";
+
+        public string DisplayText
+        {
+            get { return displayText; }
+            set
+            {
+                displayText = value;
+                OnPropertyChanged(nameof(DisplayText));
+            }
+        }
+
+        public string TempDisplay
+        {
+            get { return tempDisplay; }
+            set
+            {
+                tempDisplay = value;
+                OnPropertyChanged(nameof(TempDisplay));
+            }
+        }
 
         public MainPage()
         {
@@ -27,12 +47,12 @@ namespace Calculator
                 case "=":
                     CalculateResult();
                     break;
-                case "/":
-                case "x":
-                case "-":
+                case "÷":
+                case "×":
+                case "−":
                 case "+":
-                case "x^y":
-                case "y√x":
+                case "xʸ":
+                case "ʸ√x":
                     SetOperation(text);
                     break;
                 case "cos":
@@ -57,18 +77,17 @@ namespace Calculator
 
         void SetOperation(string op)
         {
-            if (double.TryParse(displayText, out number1))
+            if (double.TryParse(DisplayText, out number1))
             {
                 operation = op;
-                tempDisplay = displayText + " " + op + " ";
-                UpdateDisplay();
-                displayText = "";
+                TempDisplay = DisplayText + " " + op + " ";
+                DisplayText = "";
             }
         }
 
         void PerformTrigonometricOperation(string op)
         {
-            if (double.TryParse(displayText, out number1))
+            if (double.TryParse(DisplayText, out number1))
             {
                 double result = 0;
 
@@ -85,38 +104,33 @@ namespace Calculator
                         break;
                 }
 
-                displayText = result.ToString();
-                UpdateDisplay();
-                operation = ""; // Clear operation after performing trigonometric calculation
-                tempDisplay = "";
+                DisplayText = result.ToString();
+                TempDisplay = "";
             }
         }
 
         void CalculateSquare()
         {
-            if (double.TryParse(displayText, out number1))
+            if (double.TryParse(DisplayText, out number1))
             {
-                displayText = (number1 * number1).ToString();
-                UpdateDisplay();
-                tempDisplay = "";
+                DisplayText = (number1 * number1).ToString();
+                TempDisplay = "";
             }
         }
 
         void CalculateSquareRoot()
         {
-            if (double.TryParse(displayText, out number1))
+            if (double.TryParse(DisplayText, out number1))
             {
-                displayText = Math.Sqrt(number1).ToString();
-                UpdateDisplay();
-                tempDisplay = "";
+                DisplayText = Math.Sqrt(number1).ToString();
+                TempDisplay = "";
             }
         }
 
         void ClearDisplay()
         {
-            displayText = "";
-            tempDisplay = "";
-            UpdateDisplay();
+            DisplayText = "";
+            TempDisplay = "";
             number1 = 0;
             number2 = 0;
             operation = "";
@@ -124,50 +138,41 @@ namespace Calculator
 
         void AppendToDisplay(string text)
         {
-            displayText += text;
-            UpdateDisplay();
-        }
-
-        void UpdateDisplay()
-        {
-            tempDisplayLabel.Text = tempDisplay;
-            displayTextLabel.Text = displayText;
+            DisplayText += text;
         }
 
         void CalculateResult()
         {
-            if (double.TryParse(displayText, out number2))
+            if (double.TryParse(DisplayText, out number2))
             {
                 double result = 0;
 
                 switch (operation)
                 {
-                    case "/":
+                    case "÷":
                         result = number1 / number2;
                         break;
-                    case "x":
+                    case "×":
                         result = number1 * number2;
                         break;
-                    case "-":
+                    case "−":
                         result = number1 - number2;
                         break;
                     case "+":
                         result = number1 + number2;
                         break;
-                    case "x^y":
+                    case "xʸ":
                         result = Math.Pow(number1, number2);
                         break;
-                    case "y√x":
+                    case "ʸ√x":
                         result = Math.Pow(number2, 1 / number1);
                         break;
                 }
 
-                displayText = result.ToString();
-                UpdateDisplay();
+                DisplayText = result.ToString();
                 number1 = result; // Store result for consecutive operations
-                displayText = "";
+                TempDisplay = "";
                 operation = "";
-                tempDisplay = "";
             }
         }
     }
