@@ -48,7 +48,7 @@ Ensure you have the following installed:
 
 ![Screenshot 2024-06-22 233943](https://github.com/Brainydaps/Calculator/assets/41041115/66e8dcc1-cf46-40e8-aae4-c92076c8c886)
 
-
+![Screenshot 2024-06-28 at 09 41 02](https://github.com/Brainydaps/Calculator/assets/41041115/57cb9a9d-c24d-4a9f-bb6a-a9e40306ccb4)
 
 
 ## Contributing
