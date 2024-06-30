@@ -12,6 +12,13 @@ A straightforward scientific calculator app, mirroring the functionality of the 
 - **Fullscreen Mode**: Enhanced user experience with an option for fullscreen mode.
 - **Cross-Platform Support**: Available on Windows, Android, iOS, and macOS.
 
+  # [v1.2.0] - 2024-06-30
+
+## What's new?
+- **3D Button Effect:** All buttons now feature a 3D shadow effect to enhance visual appeal and provide a more tactile interface.
+- **Clicking Animation:** Buttons now include a fade-out animation when pressed, giving immediate feedback to user interactions and improving the overall user experience.
+
+
 ## Getting Started
 
 ### Prerequisites
@@ -46,7 +53,8 @@ Ensure you have the following installed:
 
 ## Screenshot
 
-![Screenshot 2024-06-22 233943](https://github.com/Brainydaps/Calculator/assets/41041115/66e8dcc1-cf46-40e8-aae4-c92076c8c886)
+![Screenshot 2024-06-30 030920](https://github.com/Brainydaps/Calculator/assets/41041115/03879c13-c958-4ec3-813f-2e33bf1115c4)
+
 
 ![Screenshot 2024-06-28 at 09 41 02](https://github.com/Brainydaps/Calculator/assets/41041115/57cb9a9d-c24d-4a9f-bb6a-a9e40306ccb4)
 
