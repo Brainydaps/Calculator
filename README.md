@@ -10,7 +10,7 @@ A straightforward scientific calculator app, mirroring the functionality of the 
 - **Advanced Operations**: Square, square root, power functions, and more.
 - **User-Friendly Display**: Previous user inputs and mathematical operations are displayed for easy reference.
 - **Fullscreen Mode**: Enhanced user experience with an option for fullscreen mode.
-- **Cross-Platform Support**: Available on Windows, Android, iOS, and macOS.
+- **Cross-Platform Support**: Available on Windows, Android, iOS, ipadOS and macOS.
 
   # [v1.2.0] - 2024-06-30
 
@@ -55,7 +55,7 @@ Ensure you have the following installed:
 
 ![Screenshot 2024-06-30 030920](https://github.com/Brainydaps/Calculator/assets/41041115/03879c13-c958-4ec3-813f-2e33bf1115c4)
 
-![Screenshot 2024-07-13 at 11 22 01](https://github.com/user-attachments/assets/0151ef06-5b51-49fb-ba16-2c7ea0ee55c4)
+![20240713_152030_0000](https://github.com/user-attachments/assets/221f84c2-4365-423b-8fa9-e049674d1717)
 
 
 
