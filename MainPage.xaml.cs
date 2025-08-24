@@ -10,6 +10,7 @@ namespace Calculator
         double number1 = 0;
         double number2 = 0;
         string operation = "";
+        bool _caretBlinking;
 
         public string DisplayText
         {
@@ -35,6 +36,37 @@ namespace Calculator
         {
             InitializeComponent();
             BindingContext = this;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            StartCaretBlink();
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            _caretBlinking = false;
+            if (caretLabel != null)
+            {
+                caretLabel.IsVisible = true;
+                caretLabel.Opacity = 1;
+            }
+        }
+
+        void StartCaretBlink()
+        {
+            _caretBlinking = true;
+            // Use a lightweight timer to toggle visibility every 1800ms
+            Device.StartTimer(TimeSpan.FromMilliseconds(1800), () =>
+            {
+                if (!_caretBlinking || caretLabel == null)
+                    return false;
+
+                caretLabel.IsVisible = !caretLabel.IsVisible;
+                return true; // keep running
+            });
         }
 
         void Button_Click(object sender, EventArgs e)
