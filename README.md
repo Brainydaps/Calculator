@@ -55,6 +55,13 @@ Ensure you have the following installed:
 
 ![Screenshot 2024-06-30 030920](https://github.com/Brainydaps/Calculator/assets/41041115/03879c13-c958-4ec3-813f-2e33bf1115c4)
 
+## Screenshot showing the latest update as of 24th august 2025 using NET MAUI 9.0 and updating the UI drastically.
+### Note that the app installed on my physical android device looks slightly different (it actually looks more like the macos version) on my physical android 15 phone compared to what you see here on the android 15 emulator deployed on jetbrains rider
+
+<img width="1440" height="900" alt="Screenshot 2025-08-24 at 03 49 54" src="https://github.com/user-attachments/assets/b8214397-edcf-4fe2-a7f8-ceb63bb23ed8" />
+
+### Screenshot of the old version using NET MAUI 8.0 and funny UI
+
 ![20240713_152030_0000](https://github.com/user-attachments/assets/221f84c2-4365-423b-8fa9-e049674d1717)
 
 
