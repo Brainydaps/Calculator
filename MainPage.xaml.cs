@@ -81,10 +81,23 @@ namespace Calculator
                     break;
                 case "÷":
                 case "×":
-                case "−":
-                case "+":
                 case "xʸ":
                 case "ʸ√x":
+                    SetOperation(text);
+                    break;
+                case "−":
+                    // Handle negative numbers: if display is empty, treat as negative sign
+                    // Otherwise, treat as subtraction operation
+                    if (string.IsNullOrEmpty(DisplayText))
+                    {
+                        AppendToDisplay(text);
+                    }
+                    else
+                    {
+                        SetOperation(text);
+                    }
+                    break;
+                case "+":
                     SetOperation(text);
                     break;
                 case "cos":
@@ -109,7 +122,11 @@ namespace Calculator
 
         void SetOperation(string op)
         {
-            if (double.TryParse(DisplayText, out number1))
+            // Handle the case where DisplayText contains the unicode minus sign (−) 
+            // Convert it to standard minus (-) for parsing
+            string parseableText = DisplayText.Replace("−", "-");
+            
+            if (double.TryParse(parseableText, out number1))
             {
                 operation = op;
                 TempDisplay = DisplayText + " " + op + " ";
@@ -119,7 +136,11 @@ namespace Calculator
 
         void PerformTrigonometricOperation(string op)
         {
-            if (double.TryParse(DisplayText, out number1))
+            // Handle the case where DisplayText contains the unicode minus sign (−) 
+            // Convert it to standard minus (-) for parsing
+            string parseableText = DisplayText.Replace("−", "-");
+            
+            if (double.TryParse(parseableText, out number1))
             {
                 double result = 0;
 
@@ -143,7 +164,11 @@ namespace Calculator
 
         void CalculateSquare()
         {
-            if (double.TryParse(DisplayText, out number1))
+            // Handle the case where DisplayText contains the unicode minus sign (−) 
+            // Convert it to standard minus (-) for parsing
+            string parseableText = DisplayText.Replace("−", "-");
+            
+            if (double.TryParse(parseableText, out number1))
             {
                 DisplayText = (number1 * number1).ToString();
                 TempDisplay = "";
@@ -152,7 +177,11 @@ namespace Calculator
 
         void CalculateSquareRoot()
         {
-            if (double.TryParse(DisplayText, out number1))
+            // Handle the case where DisplayText contains the unicode minus sign (−) 
+            // Convert it to standard minus (-) for parsing
+            string parseableText = DisplayText.Replace("−", "-");
+            
+            if (double.TryParse(parseableText, out number1))
             {
                 DisplayText = Math.Sqrt(number1).ToString();
                 TempDisplay = "";
@@ -175,7 +204,11 @@ namespace Calculator
 
         void CalculateResult()
         {
-            if (double.TryParse(DisplayText, out number2))
+            // Handle the case where DisplayText contains the unicode minus sign (−) 
+            // Convert it to standard minus (-) for parsing
+            string parseableText = DisplayText.Replace("−", "-");
+            
+            if (double.TryParse(parseableText, out number2))
             {
                 double result = 0;
 

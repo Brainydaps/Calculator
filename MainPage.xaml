@@ -29,7 +29,7 @@
     </ContentPage.Resources>
 
     <StackLayout>
-        <Grid HorizontalOptions="Center" VerticalOptions="Center" Padding="5">
+        <Grid HorizontalOptions="Center" VerticalOptions="StartAndExpand" Padding="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
@@ -50,7 +50,7 @@
 
             <!-- Display Area spanning full button width -->
             <Frame Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"
-                   HasShadow="False" Padding="10" Margin="5" BackgroundColor="#1A1A1A" CornerRadius="8" BorderColor="Gray">
+                   HasShadow="False" Padding="2" Margin="2" BackgroundColor="#1A1A1A" CornerRadius="8" BorderColor="Gray">
                 <VerticalStackLayout Spacing="6" HorizontalOptions="FillAndExpand">
                     <Label x:Name="tempDisplayLabel"
                            FontSize="24"

@@ -39,6 +39,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<!-- Exclude test project source from app compilation -->
+		<Compile Remove="CalculatorTests/**/*.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
